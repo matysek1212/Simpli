@@ -7,9 +7,18 @@
 </head>
 <body>
   <h1>Simpli</h1>
-  <p>Kupte si předplatné a získejte plný přístup!</p>
-  <a href="TVŮJ_ODKAZ_Z_GUMROAD" target="_blank">
-    <button>Koupit předplatné</button>
-  </a>
+  <button id="checkout-button">Buy Subscription</button>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const stripe = Stripe(pk_live_51SXpim0ni8h4CvJZBpcE0wwft3jXDPbT9Y3YdM2ujpku4kzTo4g4PlIM7RNklA1lMhlsqFuZAoMcpXhl78RDGEVJ00Yaw9vQMT);
+
+    const button = document.getElementById('checkout-button');
+    button.addEventListener('click', async () => {
+      const response = await fetch('https://tvuj-backend.vercel.app/api/create-checkout-session', { method: 'POST' });
+      const session = await response.json();
+      stripe.redirectToCheckout({ sessionId: session.id });
+    });
+  </script>
 </body>
 </html>
