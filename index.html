@@ -12,12 +12,12 @@
   <script src="https://js.stripe.com/v3/"></script>
   <script>
     // MUSÍ být v uvozovkách a ideálně test key
-    const stripe = Stripe("pk_test_TVŮJ_TEST_KEY");
+    const stripe = Stripe("pk_test_51SXpim0ni8h4CvJZFE4tguJpaCTWhrhMz4sEvu17zf5YtZaU2vRoVL9ORAiFqGEHLPbDRAZF87NidcxayeMdJBhr00WTJuUVKo");
 
     const button = document.getElementById('checkout-button');
     button.addEventListener('click', async () => {
       // URL změníš, až budeš mít Vercel backend
-      const response = await fetch('https://TVŮJ-PROJEKT.vercel.app/api/create-checkout-session', { 
+      const response = await fetch('https://https://sssssimpliari.vercel.app/api/create-checkout-session', { 
         method: 'POST' 
       });
 
