@@ -4,7 +4,7 @@ const stripe = new Stripe(process.env.sk_live_51SXpim0ni8h4CvJZDYh7JmMDQvIZAU0r2
 export default async function handler(req, res) {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    line_items: [{ price: process.env.PRICE_ID, quantity: 1 }],
+    line_items: [{ price: process.env.price_1SXq3Q0ni8h4CvJZuwGIoGCH , quantity: 1 }],
     mode: 'subscription',
     success_url: 'https://matysek1212.github.io/success',
     cancel_url: 'https://matysek1212.github.io/cancel',
