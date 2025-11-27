@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     await fetch('https://api.base44.com/activate', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer ' + process.env.9010125abbaf41969972f13b804b50fe,
+        'Authorization': 'Bearer ' + process.env.65446601249a4d9aaade0f80e4b9b5c9,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ email, plan: 'premium' })
