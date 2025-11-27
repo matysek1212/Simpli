@@ -23,14 +23,14 @@ button{padding:12px 18px;font-size:16px}
 <script src="https://js.stripe.com/v3/"></script>
 <script>
 // >>> ZDE vlož svůj Stripe PUBLISHABLE KEY (pk_test_xxx) <<<
-const STRIPE_PUBLISHABLE_KEY = "<<< YOUR_STRIPE_PUBLISHABLE_KEY >>>";
+const STRIPE_PUBLISHABLE_KEY = "pk_test_51SXpim0ni8h4CvJZFE4tguJpaCTWhrhMz4sEvu17zf5YtZaU2vRoVL9ORAiFqGEHLPbDRAZF87NidcxayeMdJBhr00WTJuUVKo";
 
 
 // >>> ZDE vlož URL svého Vercel backendu <<<
 const BACKEND_BASE = "https://sssssimpliari.vercel.app";
 
 
-const stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+const stripe = Stripe(pk_test_51SXpim0ni8h4CvJZFE4tguJpaCTWhrhMz4sEvu17zf5YtZaU2vRoVL9ORAiFqGEHLPbDRAZF87NidcxayeMdJBhr00WTJuUVKo);
 
 
 document.getElementById('checkout-button').addEventListener('click', async () => {
