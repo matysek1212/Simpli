@@ -2,7 +2,7 @@ import Stripe from "stripe";
 
 // >>> ZDE vlož svůj Stripe SECRET KEY (sk_test_... nebo sk_live_...) <<<
 //!!!!   TOTO NESMÍ BÝT VEŘEJNÉ, JEN NA BACKENDU   !!!!
-const stripe = new Stripe(">>> TVŮJ_SECRET_KEY <<<");
+const stripe = new Stripe("sk_test_51SXpim0ni8h4CvJZeiEAns3bWU2m9u0hBnyR4xx7b26eAgtz3PrOPnFYhtnFCOUncsWTL4TsNSLq05LYoNrA8VGY00ep6KCfBG");
 
 export default async function handler(req, res) {
   try {
